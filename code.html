@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#00201d", "on-primary": "#ffffff", "on-tertiary-container": "#b3fff3", "on-background": "#131b2e", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#005049", "tertiary-fixed-dim": "#6bd8cb", "on-surface-variant": "#434655", "outline": "#737686", "error": "#ba1a1a", "on-secondary-container": "#fffbff", "secondary-container": "#8a4cfc", "primary-fixed-dim": "#b4c5ff", "primary-fixed": "#dbe1ff", "on-secondary": "#ffffff", "surface-tint": "#0053db", "surface-container": "#eaedff", "surface-container-low": "#f2f3ff", "primary": "#004ac6", "inverse-primary": "#b4c5ff", "on-tertiary": "#ffffff", "on-primary-fixed": "#00174b", "secondary-fixed-dim": "#d2bbff", "inverse-surface": "#283044", "on-error": "#ffffff", "tertiary-fixed": "#89f5e7", "primary-container": "#2563eb", "tertiary": "#006058", "surface-container-high": "#e2e7ff", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#5a00c6", "on-primary-container": "#eeefff", "surface-container-highest": "#dae2fd", "secondary-fixed": "#eaddff", "inverse-on-surface": "#eef0ff", "surface": "#faf8ff", "secondary": "#712ae2", "on-secondary-fixed": "#25005a", "outline-variant": "#c3c6d7", "surface-variant": "#dae2fd", "tertiary-container": "#007b71", "on-surface": "#131b2e", "background": "#faf8ff", "on-primary-fixed-variant": "#003ea8", "surface-dim": "#d2d9f4", "on-error-container": "#93000a", "surface-bright": "#faf8ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-xl": "2.5rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin": "2rem" }, "fontFamily": { "display-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"] }, "fontSize": { "display-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors" id="menu-open-btn"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="SmartLib Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vhl1RN_X100Gu_52QgRP-Di_h6V4RyJTS9ZA6WAbhWUSCJglZHjtomh-uGbDS_Gx4cANOp2TgvTlkne1VCqard0rl96LBJcEHZrv2r18_LkcVUdgIp6Qp5jrYjyoe_Ts_b9kKWKSiwIL6vuDVSSzgibptFBbIzzbB7Ntl_9EV_ZVMd0mBPvKAMGfbSMQ_JJNW5ZWMGtfL4GpbBq25dLxfj9EpAIEcDm3vxMg1YjeGX"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight">SmartLib</span><span class="font-label-sm text-label-sm text-primary tracking-wide leading-none">Dashboard</span></div></div><div class="flex items-center gap-space-xs"><div class="bg-surface-container-high rounded-full p-0.5 flex items-center shadow-inner"><button class="px-2 py-1 rounded-full text-label-sm font-label-sm bg-primary text-on-primary shadow-sm transition-all" id="role-student">STU</button><button class="px-2 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="role-admin">ADM</button></div><a aria-label="Search Catalog" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="quick-search" href="#"><span class="material-symbols-outlined text-[22px]">search</span></a><a aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container relative transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-0.5 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 bg-inverse-surface/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="slide-over-backdrop"></div><aside class="fixed top-0 left-0 bottom-0 z-50 w-72 max-w-[85vw] bg-surface-container-lowest shadow-[0_20px_25px_-5px_rgba(15,23,42,0.12)] transform -translate-x-full transition-transform duration-300 ease-out flex flex-col pt-safe pb-safe" id="slide-over-menu"><div class="h-16 px-gutter-mobile flex items-center justify-between border-b border-surface-container-high"><div class="flex items-center gap-space-sm"><img alt="SmartLib Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vhl1RN_X100Gu_52QgRP-Di_h6V4RyJTS9ZA6WAbhWUSCJglZHjtomh-uGbDS_Gx4cANOp2TgvTlkne1VCqard0rl96LBJcEHZrv2r18_LkcVUdgIp6Qp5jrYjyoe_Ts_b9kKWKSiwIL6vuDVSSzgibptFBbIzzbB7Ntl_9EV_ZVMd0mBPvKAMGfbSMQ_JJNW5ZWMGtfL4GpbBq25dLxfj9EpAIEcDm3vxMg1YjeGX"/><span class="font-title-md text-title-md text-on-surface">SmartLib Suite</span></div><button aria-label="Close Menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container" id="menu-close-btn"><span class="material-symbols-outlined text-[22px]">close</span></button></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-xs"><div class="px-3 py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">E-Resources</div><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" data-path="digital-library" href="#"><span class="material-symbols-outlined text-primary text-[20px]">local_library</span><span class="font-label-lg text-label-lg">Digital Library</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" data-path="ai-recommendations" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">auto_awesome</span><span class="font-label-lg text-label-lg">AI Recommendations</span></a><div class="pt-space-sm px-3 py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Circulation Desk</div><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" data-path="reservations-holds" href="#"><span class="material-symbols-outlined text-tertiary text-[20px]">bookmark_added</span><span class="font-label-lg text-label-lg">Reservations &amp; Holds</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" data-path="fines-fees" href="#"><span class="material-symbols-outlined text-error text-[20px]">account_balance_wallet</span><span class="font-label-lg text-label-lg">Fines &amp; Balances</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" data-path="circulation-reports" href="#"><span class="material-symbols-outlined text-on-surface-variant text-[20px]">analytics</span><span class="font-label-lg text-label-lg">Analytics &amp; Reports</span></a><div class="pt-space-sm px-3 py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Account</div><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" data-path="library-card-barcode" href="#"><span class="material-symbols-outlined text-primary text-[20px]">badge</span><span class="font-label-lg text-label-lg">Digital Patron ID</span></a></div><div class="p-space-sm border-t border-surface-container-high"><div class="flex items-center gap-space-sm p-2 rounded-lg bg-surface-container-low"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="min-w-0 flex-1"><p class="font-label-lg text-label-lg text-on-surface truncate">Dr. Eleanor Vance</p><p class="font-label-sm text-label-sm text-outline truncate">ID: #LIB-98421</p></div></div></div></aside><script>const openBtn=document.getElementById('menu-open-btn'),closeBtn=document.getElementById('menu-close-btn'),backdrop=document.getElementById('slide-over-backdrop'),drawer=document.getElementById('slide-over-menu');function openDrawer(){drawer.classList.remove('-translate-x-full');backdrop.classList.remove('opacity-0','pointer-events-none');}function closeDrawer(){drawer.classList.add('-translate-x-full');backdrop.classList.add('opacity-0','pointer-events-none');}if(openBtn)openBtn.addEventListener('click',openDrawer);if(closeBtn)closeBtn.addEventListener('click',closeDrawer);if(backdrop)backdrop.addEventListener('click',closeDrawer);</script><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile space-y-space-md">
+<!-- Welcome & Greeting Card with Quick Search -->
+<section class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Central Archive Live</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface">Welcome back, Chief Librarian</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Here is your daily circulation telemetry &amp; desk operations.</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">auto_stories</span>
+</div>
+</div>
+<!-- Quick Search Bar + Voice Search Action -->
+<div class="relative flex items-center mt-space-sm">
+<span class="absolute left-3 text-on-surface-variant material-symbols-outlined text-[20px] pointer-events-none">search</span>
+<input class="w-full pl-9 pr-20 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="catalog-quick-search" placeholder="Search ISBN, Dewey code, or patron ID..." type="text"/>
+<div class="absolute right-1.5 flex items-center gap-1">
+<button aria-label="Voice Search" class="w-8 h-8 rounded-full flex items-center justify-center text-primary hover:bg-surface-container active:scale-95 transition-all" id="voice-search-btn">
+<span class="material-symbols-outlined text-[19px]">mic</span>
+</button>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant select-none">⌘K</span>
+</div>
+</div>
+</section>
+<!-- Overdue Alert Banner (Actionable Direct Push) -->
+<section class="bg-error-container text-on-error-container rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[22px]" style="font-variation-settings: 'FILL' 1;">crisis_alert</span>
+<span class="font-title-md text-title-md text-error">Overdue Escalations: 18 Priority</span>
+</div>
+<span class="font-label-sm text-label-sm bg-error text-on-error px-2 py-0.5 rounded-full">Urgent</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">18 high-demand volumes exceeded checkout duration by +5 days. Automated multi-channel notices are staged.</p>
+<div class="flex items-center gap-space-sm pt-1">
+<button class="flex-1 flex items-center justify-center gap-1.5 bg-primary text-on-primary py-2 px-3 rounded-lg font-label-lg text-label-lg hover:bg-primary-container active:scale-98 transition-all shadow-sm" id="send-reminders-btn">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Broadcast WhatsApp/SMS Reminders</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:text-on-surface transition-all">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</section>
+<!-- Quick Action Buttons Bar -->
+<section class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-on-surface">Circulation Actions</h2>
+<span class="font-label-sm text-label-sm text-outline">Counter Ready</span>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<!-- Quick Issue -->
+<button class="flex flex-col items-center justify-center p-2.5 bg-surface-container-lowest rounded-xl hover:bg-surface-container-low active:scale-95 transition-all text-center shadow-sm group">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-1.5 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">qr_code_scanner</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Quick Issue</span>
+</button>
+<!-- One-Click Return -->
+<button class="flex flex-col items-center justify-center p-2.5 bg-surface-container-lowest rounded-xl hover:bg-surface-container-low active:scale-95 transition-all text-center shadow-sm group">
+<div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-1.5 group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[22px]">keyboard_return</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">One-Click Return</span>
+</button>
+<!-- Add New Book -->
+<button class="flex flex-col items-center justify-center p-2.5 bg-surface-container-lowest rounded-xl hover:bg-surface-container-low active:scale-95 transition-all text-center shadow-sm group">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center mb-1.5 group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[22px]">bookmark_add</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Catalog Item</span>
+</button>
+<!-- Scan Barcode -->
+<button class="flex flex-col items-center justify-center p-2.5 bg-surface-container-lowest rounded-xl hover:bg-surface-container-low active:scale-95 transition-all text-center shadow-sm group">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center mb-1.5 group-hover:bg-inverse-surface group-hover:text-inverse-on-surface transition-colors">
+<span class="material-symbols-outlined text-[22px]">barcode_scanner</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Patron Scan</span>
+</button>
+</div>
+</section>
+<!-- KPI Metric Cards Grid (2 columns on mobile) -->
+<section class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-on-surface">Key Metrics &amp; Reserves</h2>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Today's Delta</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Total Books -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Holdings</span>
+<span class="material-symbols-outlined text-[18px] text-primary">shelves</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-on-surface">14,820</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-tertiary text-[14px]">arrow_upward</span>
+<span class="font-label-sm text-label-sm text-tertiary">+34 this week</span>
+</div>
+</div>
+</div>
+<!-- Available Books -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Available on Stacks</span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-on-surface">11,450</span>
+<span class="font-label-sm text-label-sm text-outline">77.2% ready to loan</span>
+</div>
+</div>
+<!-- Issued Books -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Loans</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">local_shipping</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-on-surface">3,120</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">trending_up</span>
+<span class="font-label-sm text-label-sm text-secondary">Peak hour active</span>
+</div>
+</div>
+</div>
+<!-- Overdue Books (Amber Warning) -->
+<div class="bg-surface-container-high p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Overdue Stacks</span>
+<span class="material-symbols-outlined text-[18px] text-error">warning</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-error">250</span>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-1.5 py-0.2 rounded font-bold">Needs Action</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8.0% of total loans</span>
+</div>
+</div>
+<!-- Active Reservations -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hold Queue</span>
+<span class="material-symbols-outlined text-[18px] text-primary">bookmark</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-on-surface">142</span>
+<span class="font-label-sm text-label-sm text-primary">12 holds awaiting pickup</span>
+</div>
+</div>
+<!-- Total Fine Collected -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fine Recovered</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">payments</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-on-surface">$1,840.50</span>
+<span class="font-label-sm text-label-sm text-tertiary">+$124.00 today</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Circulation Activity Graph & Sparkline Section -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md space-y-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Circulation Cadence</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hourly check-outs vs check-ins today</p>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Live Sync</span>
+</div>
+</div>
+<!-- Inline Lightweight SVG Circulation Curve Chart -->
+<div class="w-full pt-2">
+<svg aria-hidden="true" class="w-full h-24 overflow-visible" viewbox="0 0 320 90">
+<defs>
+<lineargradient id="chartBlueGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2563EB" stop-opacity="0.32"></stop>
+<stop offset="100%" stop-color="#2563EB" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="chartPurpleGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#7C3AED" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#7C3AED" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Subtle horizontal grid divisions -->
+<line stroke="#E2E8F0" stroke-dasharray="3 3" x1="0" x2="320" y1="20" y2="20"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" x1="0" x2="320" y1="50" y2="50"></line>
+<line stroke="#E2E8F0" x1="0" x2="320" y1="80" y2="80"></line>
+<!-- Checkouts filled area -->
+<path d="M 0,70 Q 50,25 100,45 T 200,18 T 280,38 T 320,15 L 320,80 L 0,80 Z" fill="url(#chartBlueGrad)"></path>
+<path d="M 0,70 Q 50,25 100,45 T 200,18 T 280,38 T 320,15" fill="none" stroke="#2563EB" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Returns filled area -->
+<path d="M 0,78 Q 60,65 110,50 T 210,35 T 270,55 T 320,30 L 320,80 L 0,80 Z" fill="url(#chartPurpleGrad)"></path>
+<path d="M 0,78 Q 60,65 110,50 T 210,35 T 270,55 T 320,30" fill="none" stroke="#7C3AED" stroke-dasharray="4 2" stroke-linecap="round" stroke-width="2"></path>
+<!-- Interactive highlight point -->
+<circle cx="200" cy="18" fill="#2563EB" r="4.5" stroke="#FFFFFF" stroke-width="2"></circle>
+<circle cx="210" cy="35" fill="#7C3AED" r="4" stroke="#FFFFFF" stroke-width="1.5"></circle>
+</svg>
+</div>
+<!-- Chart legend & stats summary -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<span class="w-3 h-1 bg-primary rounded-full"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Check-outs (412)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-1 bg-secondary rounded-full"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Check-ins (298)</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">+18% vs Yesterday</span>
+</div>
+</section>
+<!-- Today's Return Queue Preview (3 interactive books) -->
+<section class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<h2 class="font-title-md text-title-md text-on-surface">Counter Return Queue</h2>
+<span class="w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">3</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline">Batch Process All</button>
+</div>
+<div class="space-y-space-xs">
+<!-- Queue Item 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-center justify-between gap-space-sm shadow-sm transition-all duration-300" id="queue-item-1">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-16 rounded object-cover shrink-0 shadow-sm" data-alt="Modern book cover graphic showing deep azure patterns and futuristic quantum computer architectures with sharp typographic layout and elegant modern library styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3X9sool25M1SizFXkKnNplJeBfBWT9JZPqH-F_XtYuFmwNa-8JCOMCyq0okFdscE2wqKGESTvc7SGaCPukqWM6p1KY3BaEj0BGWJwleXMKLt4z9xpct1qEPXKzMX8_g30qhFbCIx4nRlFyPdPIcki4CUrayEz-78V2Ym-78YTRoTyyIZesVpO1yHAAoluxz6IsVMq7cDdyiGc6brQ5amor9A0sHIJie6ZfwZ6vxQ"/>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Principles of Quantum Computing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Prof. David M. Wallace • Call: QC174.12</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-label-sm font-label-sm bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                On-Time Return
+              </span>
+<span class="font-label-sm text-label-sm text-outline">Drop box A-2</span>
+</div>
+</div>
+</div>
+<button class="px-3 py-1.5 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm hover:bg-primary-container active:scale-95 transition-all shrink-0 flex items-center gap-1" onclick="processReturn('queue-item-1', 'Principles of Quantum Computing')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Return</span>
+</button>
+</div>
+<!-- Queue Item 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-center justify-between gap-space-sm shadow-sm transition-all duration-300" id="queue-item-2">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-16 rounded object-cover shrink-0 shadow-sm" data-alt="Editorial book cover titled Neural Networks and Deep Cognitive Architectures with purple digital circuitry patterns and sleek academic typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCR7LqC3EjP5ED7lHw-uobuVWppMU7IgZvHyJ8_oD70jug8xfai1Z8B6Uvy-VMZxZu2q-T8Ze6Q13j6rH9pJzEvzDjcgi-slrjCvT_Tsq9B0rScj8YQHnX8e6opxwsu8dAlfpsqQY-TF58CEIRygoD_6r2Dy4nbUAB5vUMskXzmRhhu4CgbUGqcOMnfKCNfHuVOMn-ntLS5fTrDy9ZHOBPeDb3R9jMF3hrSzq-9Fw"/>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Neural Networks &amp; Cognitive Arch</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Dr. Sophia Lin • Call: QA76.87</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-label-sm font-label-sm bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                +2 Days Late ($4.00)
+              </span>
+<span class="font-label-sm text-label-sm text-outline">Main Desk</span>
+</div>
+</div>
+</div>
+<button class="px-3 py-1.5 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm hover:bg-primary-container active:scale-95 transition-all shrink-0 flex items-center gap-1" onclick="processReturn('queue-item-2', 'Neural Networks &amp; Cognitive Arch')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Return</span>
+</button>
+</div>
+<!-- Queue Item 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-center justify-between gap-space-sm shadow-sm transition-all duration-300" id="queue-item-3">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-16 rounded object-cover shrink-0 shadow-sm" data-alt="Hardcover book front titled Astrophysics for Galactic Cartographers with vibrant cosmic nebulae artwork in violet, navy, and starry illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz3PR1Q6KgM7pDVNshrknlpAIti7NybYhzSVsF6dNLPn0w72mrYnXi0sPObvhVjgJKComV6FkP_BpwQAho66zf1DBnKJxbJospfmxpSOuRBFknRLMPOF9bYqqWA3SjuJ34Q0B6onX1L3OJtVWee0lnpfPgsRm0z2dnkQyQCAs73M9MmRVBIxJQoOv89vqcAwD_DC_Z2u-1O-HMNPIWNZfqT_OpODXXD78U_GaOPbs"/>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Astrophysics for Cartographers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Neil G. Mercer • Call: QB461</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Hold Requested
+              </span>
+<span class="font-label-sm text-label-sm text-outline">Patron: #S-884</span>
+</div>
+</div>
+</div>
+<button class="px-3 py-1.5 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm hover:bg-primary-container active:scale-95 transition-all shrink-0 flex items-center gap-1" onclick="processReturn('queue-item-3', 'Astrophysics for Cartographers')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Return</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Trending & Recommended Books Carousel (Horizontal scrollable stack) -->
+<section class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Trending &amp; Curated Stacks</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recommended based on department checkout surges</p>
+</div>
+<a class="font-label-sm text-label-sm text-primary flex items-center gap-0.5 hover:underline" data-path="inventory-catalog" href="#">
+<span>Explore All</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Carousel Container -->
+<div class="flex gap-space-sm overflow-x-auto pb-2 -mx-gutter-mobile px-gutter-mobile scroll-smooth snap-x snap-mandatory">
+<!-- Book Card 1 (AI / Tech) -->
+<div class="w-64 shrink-0 bg-surface-container-lowest rounded-xl p-space-sm flex flex-col justify-between shadow-sm snap-start">
+<div class="relative mb-space-sm">
+<img class="w-full h-36 rounded-lg object-cover shadow-sm" data-alt="Editorial book jacket design titled Autonomous Machine Intelligence featuring geometric wireframe diagrams, indigo gradients, and embossed futuristic academic typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI_1-ufOsVJockdU3SDNVIjmw4XMs0gZcwydyra40mGn8MGeq_-LEfj2Ag1Z8zgUDmpyQC619oCtUudURvOWFI8AihrX-ShVPET7UrHXfwxgehftdlIG4Dzw0ZZNq_fWfHxSuSu5WffSKd5BtKGfiT-ydXSzl6LKOqilFyu-w_mMAr5n7wN7MsnQOIDQIMh_b6Q06w4gyktz5VjpXvpiaRYyESu4ewJkVhT8opjSM"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold shadow-sm">
+            AI / Tech
+          </span>
+<span class="absolute bottom-2 right-2 bg-surface/90 backdrop-blur-md px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">Autonomous Machine Intelligence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Marcus Vance, Ph.D. • Oxford Press</p>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              4 on Shelf
+            </span>
+<button class="px-2.5 py-1 bg-surface-container text-primary rounded-lg font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all">
+              Reserve
+            </button>
+</div>
+</div>
+</div>
+<!-- Book Card 2 (Science) -->
+<div class="w-64 shrink-0 bg-surface-container-lowest rounded-xl p-space-sm flex flex-col justify-between shadow-sm snap-start">
+<div class="relative mb-space-sm">
+<img class="w-full h-36 rounded-lg object-cover shadow-sm" data-alt="Minimalist elegant science textbook cover titled Synthetic Biology &amp; CRISPR Futures showcasing micro-cellular imagery, clean typography and emerald highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuy9cVUJKOtqYH7tjTMmO6pkcQuKnDfCwhCnQZpgH4AsP3qydEhebDRxSy22k0_1CVjjzerg-Cm0WtvHuUnRBRDfkE3KrmoNMYsVqe7r8E9z5SwYEvwwyGCxAunZZwlHC7EDK-KHaE9QkY0j1R2IOQnu_FcAYzhomkVFBOVoPwUBpwfi8DEWpzA3VNnSebukeUGgbQB570c9TKIA29XpE0HuJEM7KSvOwNzvwy7Vw"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold shadow-sm">
+            Science
+          </span>
+<span class="absolute bottom-2 right-2 bg-surface/90 backdrop-blur-md px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">Synthetic Biology &amp; Gene Networks</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Dr. Helena Rossi • Cambridge Bio</p>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              2 on Shelf
+            </span>
+<button class="px-2.5 py-1 bg-surface-container text-primary rounded-lg font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all">
+              Reserve
+            </button>
+</div>
+</div>
+</div>
+<!-- Book Card 3 (Fiction / Literary) -->
+<div class="w-64 shrink-0 bg-surface-container-lowest rounded-xl p-space-sm flex flex-col justify-between shadow-sm snap-start">
+<div class="relative mb-space-sm">
+<img class="w-full h-36 rounded-lg object-cover shadow-sm" data-alt="Artistic novel cover titled The Memory Archivist of Alexandria with vintage architectural sketches, copper foiled highlights, and deep ultramarine background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Px_c8RFAJED9xNzqWPC9xxig0kUN3-0GVshiVUjBIjft-9fbHfQkPyHoG51sfG_hv78v3xZSFR9SKlLjCw_LS0puPd4R1OJiN98g_wjv_CkdpBkpIwsmy8ngqnpUA6-WxMXyNuqqDOKzvhbYTf5cECuzAyPOixZwN0_TvV2kpYTxCPcQdWxdb5pqmcU57B0MNEUbLCtOSVGNsFvmWYIm73krnyMLeAjAQIEIfk8"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold shadow-sm">
+            Fiction
+          </span>
+<span class="absolute bottom-2 right-2 bg-surface/90 backdrop-blur-md px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.7</span>
+</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">The Memory Archivist of Alexandria</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Julian K. Thorne • Riverhead</p>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error font-semibold">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+              All Borrowed
+            </span>
+<button class="px-2.5 py-1 bg-secondary-container text-on-secondary-container rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all">
+              Hold (Queue 3)
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Feedback Toast Container (Handled by micro-JS) -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center justify-between gap-3 opacity-0 pointer-events-none transition-all duration-300 z-50" id="librarian-toast">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px]">verified</span>
+<p class="font-body-sm text-body-sm truncate" id="toast-message">Action completed successfully.</p>
+</div>
+<button class="text-inverse-on-surface hover:opacity-75" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Micro-Interactions Script -->
+<script>
+  function showToast(msg) {
+    const toast = document.getElementById('librarian-toast');
+    const label = document.getElementById('toast-message');
+    if (!toast || !label) return;
+    label.textContent = msg;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      dismissToast();
+    }, 3800);
+  }
+
+  function dismissToast() {
+    const toast = document.getElementById('librarian-toast');
+    if (!toast) return;
+    toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+    toast.classList.remove('opacity-100', 'translate-y-0');
+  }
+
+  function processReturn(itemId, title) {
+    const row = document.getElementById(itemId);
+    if (!row) return;
+    row.style.opacity = '0.3';
+    row.style.transform = 'translateX(20px)';
+    setTimeout(() => {
+      row.innerHTML = `
+        <div class="flex items-center justify-between w-full py-2 px-1">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+            <span class="font-body-sm text-body-sm text-on-surface font-semibold">${title} safely checked in</span>
+          </div>
+          <span class="font-label-sm text-label-sm text-outline">Shelf ready</span>
+        </div>
+      `;
+      row.style.opacity = '1';
+      row.style.transform = 'none';
+      row.classList.remove('bg-surface-container-lowest');
+      row.classList.add('bg-surface-container-low');
+      showToast(`Checked in: ${title}`);
+    }, 300);
+  }
+
+  // Reminder push demo trigger
+  const reminderBtn = document.getElementById('send-reminders-btn');
+  if (reminderBtn) {
+    reminderBtn.addEventListener('click', () => {
+      reminderBtn.disabled = true;
+      reminderBtn.classList.add('opacity-70');
+      reminderBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Dispatching 18 alerts...</span>';
+      setTimeout(() => {
+        reminderBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span><span>Alerts Dispatched!</span>';
+        reminderBtn.classList.replace('bg-primary', 'bg-tertiary');
+        showToast('18 Overdue notifications sent via WhatsApp & SMS');
+      }, 1200);
+    });
+  }
+
+  // Voice Search simulation
+  const voiceBtn = document.getElementById('voice-search-btn');
+  const searchInput = document.getElementById('catalog-quick-search');
+  if (voiceBtn && searchInput) {
+    voiceBtn.addEventListener('click', () => {
+      voiceBtn.classList.add('text-error', 'animate-pulse');
+      showToast('Listening... Speak book title or author');
+      setTimeout(() => {
+        voiceBtn.classList.remove('text-error', 'animate-pulse');
+        searchInput.value = 'Quantum Computing Wallace 2024';
+        searchInput.focus();
+        showToast('Identified: "Quantum Computing Wallace 2024"');
+      }, 1800);
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-all text-primary font-bold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all" data-path="inventory-catalog" href="#"><span class="material-symbols-outlined text-[24px]">menu_book</span><span class="font-label-sm text-label-sm">Catalog</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all" data-path="active-circulation" href="#"><span class="material-symbols-outlined text-[24px]">sync_alt</span><span class="font-label-sm text-label-sm">Circulation</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-all" data-path="patron-profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>
